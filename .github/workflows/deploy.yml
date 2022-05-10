@@ -16,7 +16,7 @@ jobs:
           node-version: '14.x'
 
       - name: Install
-        run: npm install # 安装依赖
+        run: yarn install # 安装依赖
 
       - name: Build
         run: npm run build # 打包
