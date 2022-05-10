@@ -8,7 +8,10 @@ module.exports = {
     { value: 'refactor', name: 'refactor: 代码重构（不包括 bug 修复、功能新增）' },
     { value: 'perf', name: 'perf:     性能优化' },
     { value: 'test', name: 'test:     添加、修改测试用例' },
-    { value: 'build', name: 'build:    构建流程、外部依赖变更（如升级 npm 包、修改 webpack 配置等）' },
+    {
+      value: 'build',
+      name: 'build:    构建流程、外部依赖变更（如升级 npm 包、修改 webpack 配置等）'
+    },
     { value: 'ci', name: 'ci:       修改 CI 配置、脚本' },
     { value: 'chore', name: 'chore:    对构建过程或辅助工具和库的更改（不影响源文件、测试用例）' },
     { value: 'revert', name: 'revert:   回滚 commit' }
@@ -41,7 +44,6 @@ module.exports = {
   // ticketNumberPrefix: 'TICKET-',
   // ticketNumberRegExp: '\\d{1,5}',
 
-
   // 针对每一个 type 去定义对应的 scopes，例如 fix
   /*
   scopeOverrides: {
@@ -61,8 +63,7 @@ module.exports = {
     // 选择 scope: custom 时会出下面的提示
     customScope: '请输入自定义的 scope：',
     subject: '填写简短精炼的变更描述：\n',
-    body:
-      '填写更加详细的变更描述（可选）。使用 "|" 换行：\n',
+    body: '填写更加详细的变更描述（可选）。使用 "|" 换行：\n',
     breaking: '列举非兼容性重大的变更（可选）：\n',
     footer: '列举出所有变更的 ISSUES CLOSED（可选）。 例如: #31, #34：\n',
     confirmCommit: '确认提交？'
@@ -76,7 +77,7 @@ module.exports = {
 
   // subject 限制长度
   subjectLimit: 100,
-  breaklineChar: '|', // 支持 body 和 footer
+  breaklineChar: '|' // 支持 body 和 footer
   // footerPrefix : 'ISSUES CLOSED:'
   // askForBreakingChangeFirst : true,
 }
