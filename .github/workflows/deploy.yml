@@ -21,6 +21,9 @@ jobs:
       - name: Build
         run: npm run build # 打包
 
+      - name: navigate into the build output directory
+        run: cd dist
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3 # 使用部署到 GitHub pages 的 action
         with:
