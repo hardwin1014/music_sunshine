@@ -19,6 +19,8 @@
     "@better-scroll/pull-down": "^2.4.2",
     "@better-scroll/pull-up": "^2.4.2",
     "@better-scroll/slide": "^2.4.2",
+    "@vue/reactivity": "^3.2.33",
+    "@vue/runtime-core": "^3.2.33",
     "axios": "^0.26.0",
     "core-js": "^3.6.5",
     "create-keyframe-animation": "^0.1.0",

@@ -23,7 +23,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     indent: 0,
     'space-before-function-paren': 0,
-    "vue/multi-word-component-names":"off",
+    'vue/multi-word-component-names': 'off',
     'no-param-reassign': [
       'error',
       {
