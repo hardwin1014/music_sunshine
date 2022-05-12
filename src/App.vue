@@ -1,33 +1,17 @@
 <template>
-  <div>
-    <m-header />
-    <tab />
-    <router-view :style="viewStyle" v-slot="{ Component }">
-      <keep-alive>
-        <component :is="Component" />
-      </keep-alive>
-    </router-view>
-    <router-view v-slot="{ Component }" name="user" :style="viewStyle">
-      <transition appear name="slide">
-        <keep-alive>
-          <component :is="Component" />
-        </keep-alive>
-      </transition>
-    </router-view>
-    <player></player>
-  </div>
+  <m-header />
+  <tab />
+  <router-view />
 </template>
 <script>
 import Header from '@/components/header/header.vue'
 import Tab from '@/components/tab/tab.vue'
-import Player from '@/components/player/player.vue'
 import { mapState } from 'vuex'
 
 export default {
   components: {
     MHeader: Header,
-    Tab,
-    Player
+    Tab
   },
   computed: {
     ...mapState(['playlist']),

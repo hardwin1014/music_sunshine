@@ -1,6 +1,8 @@
 // 背景图片
 @mixin bg-image($url) {
   background-image: url($url + "@2x.png");
+  // 根据device-pixel-ratio设置对应的图片 https://www.shuzhiduo.com/A/xl56jA995r/
+  // 应用不同dpr上
   @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
     background-image: url($url + "@3x.png");
   }
