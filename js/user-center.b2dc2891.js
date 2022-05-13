@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["user-center"],{"3fca":function(e,n,r){"use strict";r.r(n);var c=r("f2bf");function t(e,n,r,t,u,s){return Object(c["u"])(),Object(c["g"])("div",null,"列表")}var u={name:"user-center"},s=r("6b0d"),a=r.n(s);const o=a()(u,[["render",t]]);n["default"]=o}}]);

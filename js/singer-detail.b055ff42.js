@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["singer-detail"],{"10ce":function(n,e,t){"use strict";t.r(e);var i=t("f2bf");function r(n,e,t,r,c,a){return Object(i["u"])(),Object(i["g"])("div",null,"列表")}var c={name:"singer-detail"},a=t("6b0d"),d=t.n(a);const s=d()(c,[["render",r]]);e["default"]=s}}]);

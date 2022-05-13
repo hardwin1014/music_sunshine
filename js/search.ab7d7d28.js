@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["search"],{"4e22":function(n,e,c){"use strict";c.r(e);var r=c("f2bf");function t(n,e,c,t,a,s){return Object(r["u"])(),Object(r["g"])("div",null,"搜索")}var a={name:"search"},s=c("6b0d"),u=c.n(s);const o=u()(a,[["render",t]]);e["default"]=o}}]);

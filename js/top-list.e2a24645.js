@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["top-list"],{"190a":function(n,t,e){"use strict";e.r(t);var o=e("f2bf");function c(n,t,e,c,i,r){return Object(o["u"])(),Object(o["g"])("div",null,"榜单页面")}var i={name:"top-list"},r=e("6b0d"),s=e.n(r);const u=s()(i,[["render",c]]);t["default"]=u}}]);

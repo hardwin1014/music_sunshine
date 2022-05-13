@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["top-detail"],{"9d88":function(n,t,e){"use strict";e.r(t);var d=e("f2bf");function o(n,t,e,o,a,c){return Object(d["u"])(),Object(d["g"])("div",null,"列表")}var a={name:"top-detail"},c=e("6b0d"),i=e.n(c);const r=i()(a,[["render",o]]);t["default"]=r}}]);

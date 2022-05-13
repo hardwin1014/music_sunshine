@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["album"],{"04f0":function(n,e,u){"use strict";u.r(e);var t=u("f2bf");function a(n,e,u,a,b,c){return Object(t["u"])(),Object(t["g"])("div",null,"列表")}var b={name:"album"},c=u("6b0d"),r=u.n(c);const o=r()(b,[["render",a]]);e["default"]=o}}]);
