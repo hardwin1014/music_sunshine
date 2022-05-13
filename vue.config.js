@@ -4,8 +4,8 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        // 全局引入变量和 mixin，定义的mixin就可以被sass-loader解析
-        prependData: `
+        // 全局引入变量和 mixin
+        additionalData: `
           @import "@/assets/scss/variable.scss";
           @import "@/assets/scss/mixin.scss";
         `
@@ -13,13 +13,14 @@ module.exports = {
     }
   },
   devServer: {
+    // app是express的一个实例
     before(app) {
       registerRouter(app)
     }
   },
   configureWebpack: (config) => {
     if (process.env.npm_config_report) {
-      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+      const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
       config.plugins.push(new BundleAnalyzerPlugin())
     }
   },
