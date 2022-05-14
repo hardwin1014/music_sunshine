@@ -1,5 +1,5 @@
 import BScroll from '@better-scroll/core'
-import ObserveDOM from '@better-scroll/observe-dom'
+import ObserveDOM from '@better-scroll/observe-dom' // 监听dom变化
 import { onMounted, onUnmounted, onActivated, onDeactivated, ref } from 'vue'
 
 BScroll.use(ObserveDOM)
@@ -14,8 +14,10 @@ export default function useScroll(wrapperRef, options, emit) {
       ...options
     })
 
+    // 在这里判断probeType
     if (options.probeType > 0) {
       scrollVal.on('scroll', (pos) => {
+        // 派发一个事件，把位置信息派发出去
         emit('scroll', pos)
       })
     }
