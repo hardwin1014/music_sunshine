@@ -1,5 +1,5 @@
 <template>
-  <div class="recommend" v-loading="loading">
+  <div class="recommend" v-loading:[loadingText]="loading">
     <scroll class="recommend-content">
       <!--只针对第一个子元素生效-->
       <div>
@@ -54,7 +54,8 @@ export default {
     return {
       sliders: [],
       albums: [],
-      selectedAlbum: null
+      selectedAlbum: null,
+      loadingText: '正在载入...' // 可自定义title，可不传
     }
   },
   computed: {
@@ -91,12 +92,12 @@ export default {
   bottom: 0;
   overflow: scroll;
   .recommend-content {
-    height: 100%;
+    height: 100%; // 给容器一个和外层一样的固定的高，这样内容
     overflow: hidden;
     .slider-wrapper {
       position: relative;
       width: 100%;
-      height: 0; // 容器的高度不能和内容的高度一样
+      height: 0;
       padding-top: 40%;
       overflow: hidden;
       .slider-content {
