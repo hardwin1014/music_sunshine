@@ -2,6 +2,7 @@ import { get } from './base'
 
 export function processSongs(songs) {
   if (!songs.length) {
+    // 如果是空的，原样返回
     return Promise.resolve(songs)
   }
   return get('/api/getSongsUrl', {
@@ -16,6 +17,7 @@ export function processSongs(songs) {
         return song
       })
       .filter((song) => {
+        // vkey 是给歌曲加密的
         return song.url && song.url.indexOf('vkey') > -1
       })
   })

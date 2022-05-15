@@ -65,7 +65,7 @@ export default {
   },
   async created() {
     const result = await getRecommend()
-    console.log(result)
+    // console.log(result)
     this.sliders = result.sliders
     this.albums = result.albums
   },
