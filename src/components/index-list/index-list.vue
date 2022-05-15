@@ -28,6 +28,7 @@
       @touchmove.stop.prevent="onShortcutTouchMove"
       @touchend.stop.prevent
     >
+    <!--touch的三个事件 阻止冒泡和默认行为 -->
       <ul>
         <li
           v-for="(item, index) in shortcutList"
@@ -36,6 +37,7 @@
           class="item"
           :class="{ current: currentIndex === index }"
         >
+          <span v-show="currentIndex === index" class="bubble">{{item}}</span>
           {{ item }}
         </li>
       </ul>
@@ -157,6 +159,14 @@ export default {
       font-size: $font-size-small;
       &.current {
         color: $color-theme;
+      }
+      .bubble{
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: -25px;
+        font-size: 2em;
+        transform: translateY(-5px);
       }
     }
   }
