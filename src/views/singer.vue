@@ -5,6 +5,7 @@
       @select="selectSinger"
     ></index-list>
     <router-view v-slot="{ Component }">
+      <!-- 过渡   name和css样式名一致   appear 进入就有动画 -->
       <transition appear name="slide">
         <component :is="Component" :data="selectedSinger"/>
       </transition>
@@ -42,6 +43,7 @@ export default {
       })
     },
     cacheSinger(singer) {
+      // 存储项目中共享的常量
       storage.session.set(SINGER_KEY, singer)
     }
   }

@@ -14,6 +14,7 @@ export default function createLoadingLikeDirective(Comp) {
       // 要挂载到el上
       const instance = app.mount(document.createElement('div'))
       const { name } = Comp
+      // el可以存储多个了, 通过name
       if (!el[name]) {
         el[name] = {} // 解决多指令数据覆盖的情况
       }

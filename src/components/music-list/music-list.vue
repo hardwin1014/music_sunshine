@@ -106,7 +106,7 @@
         let zIndex = 0
         let paddingTop = '70%'// 正常情况下，把图片撑起来的
         let height = 0
-        let translateZ = 0 // 解决iOS兼容性问题
+        let translateZ = 0 // 解决iOS兼容性问题,移得更近，更远
 
         // 如果scrollY超过那个位置 把图片层级设高，因为现在的高是通过padding-top撑起来的，所以把padding-top设置为0
         if (scrollY > this.maxTranslateY) {
@@ -147,7 +147,7 @@
           blur = Math.min(this.maxTranslateY / imageHeight, scrollY / imageHeight) * 20
         }
         return {
-          // 模糊效果
+          // 滤镜, 模糊效果
           backdropFilter: `blur(${blur}px)`
         }
       },

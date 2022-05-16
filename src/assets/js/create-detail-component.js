@@ -22,7 +22,9 @@ export default function createDetailComponent(name, key, fetch) {
         if (data) {
           ret = data
         } else {
+          // 防止刷新失去数据
           const cacheSinger = storage.session.get(key)
+          // 如果歌手的ID和路由上的ID相等，那么就取值
           if (cacheSinger && (cacheSinger.mid || `${cacheSinger.id}`) === this.$route.params.id) {
             ret = cacheSinger
           }
@@ -41,7 +43,8 @@ export default function createDetailComponent(name, key, fetch) {
     async created() {
       const data = this.computedData
       if (!data) {
-        const { path } = this.$route.matched[0]
+        // 如果数据为null，退回到一级路由, 下面的不执行
+        const { path } = this.$route.matched[0] // 第一个匹配的路径
         this.$router.push({
           path
         })

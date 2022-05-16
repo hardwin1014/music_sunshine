@@ -1,11 +1,12 @@
 import { PLAY_MODE } from '@/assets/js/constant'
 import { shuffle } from '@/assets/js/util'
 
+// 选择播放
 export function selectPlay({ commit }, { list, index }) {
   commit('setPlayMode', PLAY_MODE.sequence)
   commit('setSequenceList', list)
-  commit('setPlayingState', true)
-  commit('setFullScreen', true)
+  commit('setPlayingState', true)// 点击了要播放
+  commit('setFullScreen', true) // 全屏
   commit('setPlaylist', list)
   commit('setCurrentIndex', index)
 }
