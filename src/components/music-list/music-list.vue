@@ -93,7 +93,7 @@
       },
       playBtnStyle() {
         let display = ''
-        // 如果scrollY超过那个位置
+        // 如果scrollY到上面就把随机播放隐藏
         if (this.scrollY >= this.maxTranslateY) {
           display = 'none'
         }
@@ -177,6 +177,7 @@
       random() {
         this.randomPlay(this.songs)
       },
+      // 语法题，作用到methods下
       ...mapActions([
         'selectPlay',
         'randomPlay'
