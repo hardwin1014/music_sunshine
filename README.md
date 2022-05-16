@@ -1,5 +1,8 @@
 ## 优化技巧
 + 在计算属性中,使用的变量大于一次的时候,要使用临时变量缓存，因为每次执行this.xxx的时候会执行依赖收集，性能优化
++ vue3使用Composition API拿vuex的数据 const store = useStore()
++ 利用计算属性,把数据处理成响应式的
+const fullScreen = computed(() => store.state.fullScreen)
 ## 一
 
 全局引入变量和 mixin
