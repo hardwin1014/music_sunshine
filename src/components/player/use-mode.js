@@ -16,6 +16,7 @@ export default function useMode() {
         : 'icon-loop'
   })
 
+  // 播放模式进行判断，更换icon
   const modeText = computed(() => {
     const playModeVal = playMode.value
     return playModeVal === PLAY_MODE.sequence
@@ -25,6 +26,7 @@ export default function useMode() {
         : '单曲循环'
   })
 
+  // 把播放列表进行洗牌提交
   function changeMode() {
     const mode = (playMode.value + 1) % 3
     store.dispatch('changeMode', mode)

@@ -23,7 +23,7 @@ const mutations = {
   setFullScreen(state, fullScreen) {
     state.fullScreen = fullScreen
   },
-  // 设置喜欢列表
+  // 设置收藏列表
   setFavoriteList(state, list) {
     state.favoriteList = list
   },

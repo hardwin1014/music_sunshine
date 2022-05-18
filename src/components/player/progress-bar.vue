@@ -36,6 +36,7 @@
     },
     data() {
       return {
+        // 宽度
         offset: 0
       }
     },
@@ -47,6 +48,7 @@
         return `transform:translate3d(${this.offset}px,0,0)`
       }
     },
+    // 监听progress的变化，拿到新的值
     watch: {
       progress(newProgress) {
         this.setOffset(newProgress)
@@ -81,7 +83,9 @@
         this.$emit('progress-changed', progress)
       },
       setOffset(progress) {
+        // 进度条的宽度
         const barWidth = this.$el.clientWidth - progressBtnWidth
+        // 得到偏移量
         this.offset = barWidth * progress
       }
     }

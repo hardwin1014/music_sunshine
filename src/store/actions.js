@@ -21,18 +21,20 @@ export function randomPlay({ commit }, list) {
 }
 
 export function changeMode({ commit, state, getters }, mode) {
+  // 先拿到当前播放的歌曲ID
   const currentId = getters.currentSong.id
-  // 顺序播放 => 随机播放
+  // 顺序播放 => 随机播放(洗牌)
   if (mode === PLAY_MODE.random) {
     // 洗牌
     commit('setPlaylist', shuffle(state.sequenceList))
   } else {
     commit('setPlaylist', state.sequenceList)
   }
+  // 改变播放模式的时候，不要改变当前播放的歌曲，所以利用之前缓存的ID找到原来的歌曲下标
   const index = state.playlist.findIndex((song) => {
     return song.id === currentId
   })
-  commit('setCurrentIndex', index)
+  commit('setCurrentIndex', index)// 保证新列表中的索引的歌曲还是原来的歌曲
   commit('setPlayMode', mode)
 }
 
