@@ -8,6 +8,7 @@ export default function usePlayHistory() {
   const maxLen = 200
 
   function savePlay(song) {
+    // 将正在播放的歌曲储存
     const songs = save(song, PLAY_KEY, (item) => {
       return item.id === song.id
     }, maxLen)

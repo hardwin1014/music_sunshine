@@ -117,6 +117,7 @@
         </div>
       </div>
     </transition>
+    <!--  全局底部歌曲播放栏  -->
     <mini-player
       :progress="progress"
       :toggle-play="togglePlay"
@@ -189,11 +190,13 @@
       // computed
       const playlist = computed(() => store.state.playlist)
 
+      // 根据store中存储的状态，切换图标
       const playIcon = computed(() => {
         // 动态设置 播放  暂停  两种状态
         return playing.value ? 'icon-pause' : 'icon-play'
       })
 
+      // 歌曲进度
       const progress = computed(() => {
         return currentTime.value / currentSong.value.duration
       })
@@ -319,6 +322,7 @@
         // j暂停了将数据同步
         songReady.value = true
         playLyric()
+        // 保存当前歌曲
         savePlay(currentSong.value)
       }
 

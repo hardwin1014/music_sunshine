@@ -3,7 +3,7 @@ export const FAVORITE_KEY = '__favorite__'
 export const ALBUM_KEY = '__album__'
 export const TOP_KEY = '__top__'
 export const SEARCH_KEY = '__search__'
-export const PLAY_KEY = '__play__'
+export const PLAY_KEY = '__play__' // 当前播放的歌曲
 export const ROUTER_LINK_KEY = '__router-link__'
 export const PLAY_MODE = {
   sequence: 0, // 顺序播放

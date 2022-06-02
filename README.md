@@ -408,7 +408,7 @@ scroll.vue
 
 将 scroll return出去
 
-```
+```js
 setup(props, { emit }) {
     const rootRef = ref(null)
     const scroll = useScroll(rootRef, props, emit)
